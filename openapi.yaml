@@ -4,7 +4,7 @@ info:
   version: 0.1.0
 servers:
   - url: https://api.techinterviewer.ai
-    description: The production API
+    description: Production API
 paths:
   /interview-configs:
     get:
@@ -46,6 +46,20 @@ paths:
   /create_session:
     post:
       summary: Create Session
+      description: |-
+        Create a new interview session.
+
+        Parameters:
+        - interview_config_id: str (required)
+        - first_name: str (required)
+        - last_name: str (required)
+        - email: str (optional)
+        - phone_number: str (optional, must be in format +1XXXXXXXXXX)
+
+        Returns:
+        - {
+          'id': unique_session_id
+        }
       operationId: create_session_create_session_post
       requestBody:
         content:
@@ -58,7 +72,8 @@ paths:
           description: Successful Response
           content:
             application/json:
-              schema: {}
+              schema:
+                $ref: '#/components/schemas/CreateSessionsResponse'
         '422':
           description: Validation Error
           content:
@@ -123,10 +138,37 @@ components:
         interview_config_id:
           type: string
           title: Interview Config Id
+        first_name:
+          type: string
+          title: First Name
+        last_name:
+          type: string
+          title: Last Name
+        email:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Email
+        phone_number:
+          anyOf:
+            - type: string
+            - type: 'null'
+          title: Phone Number
       type: object
       required:
         - interview_config_id
+        - first_name
+        - last_name
       title: CreateSessionsRequestBody
+    CreateSessionsResponse:
+      properties:
+        id:
+          type: string
+          title: Id
+      type: object
+      required:
+        - id
+      title: CreateSessionsResponse
     HTTPValidationError:
       properties:
         detail:
@@ -170,3 +212,4 @@ components:
     HTTPBasic:
       type: http
       scheme: basic
+

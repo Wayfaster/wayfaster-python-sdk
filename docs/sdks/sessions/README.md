@@ -11,7 +11,19 @@
 
 ## create_session
 
-Create Session
+Create a new interview session.
+
+Parameters:
+- interview_config_id: str (required)
+- first_name: str (required)
+- last_name: str (required)
+- email: str (optional)
+- phone_number: str (optional, must be in format +1XXXXXXXXXX)
+
+Returns:
+- {
+  'id': unique_session_id
+}
 
 ### Example Usage
 
@@ -29,6 +41,8 @@ s = Wayfaster(
 
 res = s.sessions.create_session(request={
     "interview_config_id": "<id>",
+    "first_name": "Kaylee",
+    "last_name": "Wyman",
 })
 
 if res is not None:
@@ -46,7 +60,7 @@ if res is not None:
 
 ### Response
 
-**[Any](../../models/.md)**
+**[models.CreateSessionsResponse](../../models/createsessionsresponse.md)**
 
 ### Errors
 

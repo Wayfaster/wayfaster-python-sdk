@@ -18,8 +18,22 @@ class Sessions(BaseSDK):
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> Any:
+    ) -> models.CreateSessionsResponse:
         r"""Create Session
+
+        Create a new interview session.
+
+        Parameters:
+        - interview_config_id: str (required)
+        - first_name: str (required)
+        - last_name: str (required)
+        - email: str (optional)
+        - phone_number: str (optional, must be in format +1XXXXXXXXXX)
+
+        Returns:
+        - {
+        'id': unique_session_id
+        }
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -79,7 +93,7 @@ class Sessions(BaseSDK):
 
         data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return utils.unmarshal_json(http_res.text, Any)
+            return utils.unmarshal_json(http_res.text, models.CreateSessionsResponse)
         if utils.match_response(http_res, "422", "application/json"):
             data = utils.unmarshal_json(http_res.text, models.HTTPValidationErrorData)
             raise models.HTTPValidationError(data=data)
@@ -105,8 +119,22 @@ class Sessions(BaseSDK):
         retries: OptionalNullable[utils.RetryConfig] = UNSET,
         server_url: Optional[str] = None,
         timeout_ms: Optional[int] = None,
-    ) -> Any:
+    ) -> models.CreateSessionsResponse:
         r"""Create Session
+
+        Create a new interview session.
+
+        Parameters:
+        - interview_config_id: str (required)
+        - first_name: str (required)
+        - last_name: str (required)
+        - email: str (optional)
+        - phone_number: str (optional, must be in format +1XXXXXXXXXX)
+
+        Returns:
+        - {
+        'id': unique_session_id
+        }
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -166,7 +194,7 @@ class Sessions(BaseSDK):
 
         data: Any = None
         if utils.match_response(http_res, "200", "application/json"):
-            return utils.unmarshal_json(http_res.text, Any)
+            return utils.unmarshal_json(http_res.text, models.CreateSessionsResponse)
         if utils.match_response(http_res, "422", "application/json"):
             data = utils.unmarshal_json(http_res.text, models.HTTPValidationErrorData)
             raise models.HTTPValidationError(data=data)

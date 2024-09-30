@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 343b076a-d522-4ccb-8748-767fa4ad688e
 management:
-  docChecksum: 64eb6154960ea16e5965119d62da63b7
+  docChecksum: 38a6006f6508e8a7aed2aebae79b199f
   docVersion: 0.1.0
-  speakeasyVersion: 1.405.2
+  speakeasyVersion: 1.405.4
   generationVersion: 2.428.1
-  releaseVersion: 0.1.0
-  configChecksum: eac7089234773621907db377615a12d5
+  releaseVersion: 0.2.0
+  configChecksum: c42482f3a180fd782ff9419d1dddfb3b
   published: true
 features:
   python:
@@ -22,6 +22,7 @@ features:
     groups: 3.0.0
     methodArguments: 1.0.2
     nameOverrides: 3.0.0
+    nullables: 1.0.0
     responseFormat: 1.0.1
     retries: 3.0.2
     sdkHooks: 1.0.0
@@ -35,6 +36,7 @@ generatedFiles:
   - CONTRIBUTING.md
   - USAGE.md
   - docs/models/createsessionsrequestbody.md
+  - docs/models/createsessionsresponse.md
   - docs/models/httpvalidationerror.md
   - docs/models/loc.md
   - docs/models/readinterviewconfiginterviewconfigsidgetrequest.md
@@ -62,6 +64,7 @@ generatedFiles:
   - src/wayfaster/interviewconfigs.py
   - src/wayfaster/models/__init__.py
   - src/wayfaster/models/createsessionsrequestbody.py
+  - src/wayfaster/models/createsessionsresponse.py
   - src/wayfaster/models/httpvalidationerror.py
   - src/wayfaster/models/read_interview_config_interview_configs_id_getop.py
   - src/wayfaster/models/read_session_sessions_id_getop.py
@@ -108,10 +111,10 @@ examples:
   create_session_create_session_post:
     speakeasy-default-create-session-create-session-post:
       requestBody:
-        application/json: {"interview_config_id": "<id>"}
+        application/json: {"interview_config_id": "<id>", "first_name": "Kaylee", "last_name": "Wyman"}
       responses:
         "200":
-          application/json: "<value>"
+          application/json: {"id": "<id>"}
         "422": {}
   read_sessions_sessions_post:
     speakeasy-default-read-sessions-sessions-post:

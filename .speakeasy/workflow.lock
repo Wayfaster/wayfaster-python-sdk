@@ -2,16 +2,16 @@ speakeasyVersion: 1.405.4
 sources:
     Wayfaster-OAS:
         sourceNamespace: wayfaster-oas
-        sourceRevisionDigest: sha256:ccbfbd3a8677e87f3d6daec12d01ca9e0f67504c67191f3a2996fd0cb62623b9
-        sourceBlobDigest: sha256:9abe62f10096cbe581511c94cf2bf4753dbec610283c7ff1935a560c07a80ead
+        sourceRevisionDigest: sha256:e179339c5fb2c46c2e3d531cb74379e9c01ed974692189823036feaf99fab785
+        sourceBlobDigest: sha256:7d1e4316f16bee5bfc6f1a93a50fef42918dbdcf1756b36d5b0c89d00e36749b
         tags:
             - latest
 targets:
     wayfaster:
         source: Wayfaster-OAS
         sourceNamespace: wayfaster-oas
-        sourceRevisionDigest: sha256:ccbfbd3a8677e87f3d6daec12d01ca9e0f67504c67191f3a2996fd0cb62623b9
-        sourceBlobDigest: sha256:9abe62f10096cbe581511c94cf2bf4753dbec610283c7ff1935a560c07a80ead
+        sourceRevisionDigest: sha256:e179339c5fb2c46c2e3d531cb74379e9c01ed974692189823036feaf99fab785
+        sourceBlobDigest: sha256:7d1e4316f16bee5bfc6f1a93a50fef42918dbdcf1756b36d5b0c89d00e36749b
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

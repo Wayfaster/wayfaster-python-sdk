@@ -12,7 +12,7 @@ from wayfaster.types import OptionalNullable, UNSET
 
 SERVERS = [
     "https://api.techinterviewer.ai",
-    # The production API
+    # Production API
 ]
 """Contains the list of servers available to the SDK"""
 
@@ -27,9 +27,9 @@ class SDKConfiguration:
     server_idx: Optional[int] = 0
     language: str = "python"
     openapi_doc_version: str = "0.1.0"
-    sdk_version: str = "0.1.0"
+    sdk_version: str = "0.2.0"
     gen_version: str = "2.428.1"
-    user_agent: str = "speakeasy-sdk/python 0.1.0 2.428.1 0.1.0 wayfaster"
+    user_agent: str = "speakeasy-sdk/python 0.2.0 2.428.1 0.1.0 wayfaster"
     retry_config: OptionalNullable[RetryConfig] = Field(default_factory=lambda: UNSET)
     timeout_ms: Optional[int] = None
 

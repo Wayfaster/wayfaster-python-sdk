@@ -1,19 +1,20 @@
-speakeasyVersion: 1.405.2
+speakeasyVersion: 1.405.4
 sources:
     Wayfaster-OAS:
         sourceNamespace: wayfaster-oas
-        sourceRevisionDigest: sha256:d134b92ce6f78369e76e6fa05e3e7e38eae97751234559a798f692524667ceaa
-        sourceBlobDigest: sha256:e5b45f8751c0d97cd310b96faaaa508c0386b6d0edcdf28d6374348f73eaa580
+        sourceRevisionDigest: sha256:ccbfbd3a8677e87f3d6daec12d01ca9e0f67504c67191f3a2996fd0cb62623b9
+        sourceBlobDigest: sha256:9abe62f10096cbe581511c94cf2bf4753dbec610283c7ff1935a560c07a80ead
         tags:
             - latest
 targets:
     wayfaster:
         source: Wayfaster-OAS
         sourceNamespace: wayfaster-oas
-        sourceRevisionDigest: sha256:d134b92ce6f78369e76e6fa05e3e7e38eae97751234559a798f692524667ceaa
-        sourceBlobDigest: sha256:e5b45f8751c0d97cd310b96faaaa508c0386b6d0edcdf28d6374348f73eaa580
+        sourceRevisionDigest: sha256:ccbfbd3a8677e87f3d6daec12d01ca9e0f67504c67191f3a2996fd0cb62623b9
+        sourceBlobDigest: sha256:9abe62f10096cbe581511c94cf2bf4753dbec610283c7ff1935a560c07a80ead
 workflow:
     workflowVersion: 1.0.0
+    speakeasyVersion: latest
     sources:
         Wayfaster-OAS:
             inputs:
@@ -26,3 +27,6 @@ workflow:
         wayfaster:
             target: python
             source: Wayfaster-OAS
+            publish:
+                pypi:
+                    token: $pypi_token

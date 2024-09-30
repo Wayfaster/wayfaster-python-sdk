@@ -18,8 +18,6 @@ paths:
               schema: {}
       security:
         - HTTPBasic: []
-      x-speakeasy-group: interviewConfigs
-      x-speakeasy-name-override: list
   /interview-configs/{id}:
     get:
       summary: Read Interview Config
@@ -45,8 +43,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
-      x-speakeasy-group: interviewConfigs
-      x-speakeasy-name-override: get
   /create_session:
     post:
       summary: Create Session
@@ -71,8 +67,6 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
       security:
         - HTTPBasic: []
-      x-speakeasy-group: sessions
-      x-speakeasy-name-override: createSession
   /sessions:
     post:
       summary: Read Sessions
@@ -97,8 +91,6 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
       security:
         - HTTPBasic: []
-      x-speakeasy-group: sessions
-      x-speakeasy-name-override: create
   /sessions/{id}:
     get:
       summary: Read Session
@@ -124,8 +116,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
-      x-speakeasy-group: sessions
-      x-speakeasy-name-override: get
 components:
   schemas:
     CreateSessionsRequestBody:

@@ -11,3 +11,6 @@ targets:
     wayfaster:
         target: python
         source: Wayfaster-OAS
+        publish:
+            pypi:
+                token: $pypi_token

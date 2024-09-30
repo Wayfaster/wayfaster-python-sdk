@@ -1,0 +1,13 @@
+workflowVersion: 1.0.0
+sources:
+    Wayfaster-OAS:
+        inputs:
+            - location: ../openapi.yaml
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay-1.yaml
+        registry:
+            location: registry.speakeasyapi.dev/interviewer/wayfaster/wayfaster-oas
+targets:
+    wayfaster:
+        target: python
+        source: Wayfaster-OAS

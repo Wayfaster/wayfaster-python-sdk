@@ -1,0 +1,28 @@
+speakeasyVersion: 1.405.2
+sources:
+    Wayfaster-OAS:
+        sourceNamespace: wayfaster-oas
+        sourceRevisionDigest: sha256:d134b92ce6f78369e76e6fa05e3e7e38eae97751234559a798f692524667ceaa
+        sourceBlobDigest: sha256:e5b45f8751c0d97cd310b96faaaa508c0386b6d0edcdf28d6374348f73eaa580
+        tags:
+            - latest
+targets:
+    wayfaster:
+        source: Wayfaster-OAS
+        sourceNamespace: wayfaster-oas
+        sourceRevisionDigest: sha256:d134b92ce6f78369e76e6fa05e3e7e38eae97751234559a798f692524667ceaa
+        sourceBlobDigest: sha256:e5b45f8751c0d97cd310b96faaaa508c0386b6d0edcdf28d6374348f73eaa580
+workflow:
+    workflowVersion: 1.0.0
+    sources:
+        Wayfaster-OAS:
+            inputs:
+                - location: ../openapi.yaml
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay-1.yaml
+            registry:
+                location: registry.speakeasyapi.dev/interviewer/wayfaster/wayfaster-oas
+    targets:
+        wayfaster:
+            target: python
+            source: Wayfaster-OAS

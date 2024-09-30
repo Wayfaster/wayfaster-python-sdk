@@ -1,0 +1,59 @@
+overlay: 1.0.0
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/create_session"]["post"]
+    update:
+      x-speakeasy-group: sessions
+      x-speakeasy-name-override: createSession
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.create_session_create_session_post()
+      after: sdk.sessions.createSession()
+      reviewed_at: 1727708640719
+      created_at: 1727708633181
+  - target: $["paths"]["/sessions"]["post"]
+    update:
+      x-speakeasy-group: sessions
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.read_sessions_sessions_post()
+      after: sdk.sessions.create()
+      reviewed_at: 1727708640720
+      created_at: 1727708633181
+  - target: $["paths"]["/sessions/{id}"]["get"]
+    update:
+      x-speakeasy-group: sessions
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.read_session_sessions__id__get()
+      after: sdk.sessions.get()
+      reviewed_at: 1727708640720
+      created_at: 1727708633181
+  - target: $["paths"]["/interview-configs"]["get"]
+    update:
+      x-speakeasy-group: interviewConfigs
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.read_interview_configs_interview_configs_get()
+      after: sdk.interviewConfigs.list()
+      reviewed_at: 1727708640720
+      created_at: 1727708633181
+  - target: $["paths"]["/interview-configs/{id}"]["get"]
+    update:
+      x-speakeasy-group: interviewConfigs
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.read_interview_config_interview_configs__id__get()
+      after: sdk.interviewConfigs.get()
+      reviewed_at: 1727708640720
+      created_at: 1727708633181

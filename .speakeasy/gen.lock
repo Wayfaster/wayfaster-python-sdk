@@ -1,0 +1,131 @@
+lockVersion: 2.0.0
+id: 343b076a-d522-4ccb-8748-767fa4ad688e
+management:
+  docChecksum: 64eb6154960ea16e5965119d62da63b7
+  docVersion: 0.1.0
+  speakeasyVersion: 1.405.2
+  generationVersion: 2.428.1
+  releaseVersion: 0.1.0
+  configChecksum: eac7089234773621907db377615a12d5
+features:
+  python:
+    additionalDependencies: 1.0.0
+    core: 5.5.7
+    defaultEnabledRetries: 0.2.0
+    devContainers: 3.0.0
+    envVarSecurityUsage: 0.3.1
+    flattening: 3.0.0
+    globalSecurity: 3.0.2
+    globalSecurityCallbacks: 1.0.0
+    globalServerURLs: 3.0.0
+    groups: 3.0.0
+    methodArguments: 1.0.2
+    nameOverrides: 3.0.0
+    responseFormat: 1.0.1
+    retries: 3.0.2
+    sdkHooks: 1.0.0
+    unions: 3.0.2
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .gitattributes
+  - .vscode/settings.json
+  - CONTRIBUTING.md
+  - USAGE.md
+  - docs/models/createsessionsrequestbody.md
+  - docs/models/httpvalidationerror.md
+  - docs/models/loc.md
+  - docs/models/readinterviewconfiginterviewconfigsidgetrequest.md
+  - docs/models/readsessionsessionsidgetrequest.md
+  - docs/models/readsessionsrequestbody.md
+  - docs/models/security.md
+  - docs/models/utils/retryconfig.md
+  - docs/models/validationerror.md
+  - docs/sdks/interviewconfigs/README.md
+  - docs/sdks/sessions/README.md
+  - docs/sdks/wayfaster/README.md
+  - poetry.toml
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/compile.sh
+  - scripts/prepare-readme.py
+  - scripts/publish.sh
+  - src/wayfaster/__init__.py
+  - src/wayfaster/_hooks/__init__.py
+  - src/wayfaster/_hooks/sdkhooks.py
+  - src/wayfaster/_hooks/types.py
+  - src/wayfaster/basesdk.py
+  - src/wayfaster/httpclient.py
+  - src/wayfaster/interviewconfigs.py
+  - src/wayfaster/models/__init__.py
+  - src/wayfaster/models/createsessionsrequestbody.py
+  - src/wayfaster/models/httpvalidationerror.py
+  - src/wayfaster/models/read_interview_config_interview_configs_id_getop.py
+  - src/wayfaster/models/read_session_sessions_id_getop.py
+  - src/wayfaster/models/readsessionsrequestbody.py
+  - src/wayfaster/models/sdkerror.py
+  - src/wayfaster/models/security.py
+  - src/wayfaster/models/validationerror.py
+  - src/wayfaster/py.typed
+  - src/wayfaster/sdk.py
+  - src/wayfaster/sdkconfiguration.py
+  - src/wayfaster/sessions.py
+  - src/wayfaster/types/__init__.py
+  - src/wayfaster/types/basemodel.py
+  - src/wayfaster/utils/__init__.py
+  - src/wayfaster/utils/annotations.py
+  - src/wayfaster/utils/enums.py
+  - src/wayfaster/utils/eventstreaming.py
+  - src/wayfaster/utils/forms.py
+  - src/wayfaster/utils/headers.py
+  - src/wayfaster/utils/logger.py
+  - src/wayfaster/utils/metadata.py
+  - src/wayfaster/utils/queryparams.py
+  - src/wayfaster/utils/requestbodies.py
+  - src/wayfaster/utils/retries.py
+  - src/wayfaster/utils/security.py
+  - src/wayfaster/utils/serializers.py
+  - src/wayfaster/utils/url.py
+  - src/wayfaster/utils/values.py
+examples:
+  read_interview_configs_interview_configs_get:
+    speakeasy-default-read-interview-configs-interview-configs-get:
+      responses:
+        "200":
+          application/json: "<value>"
+  read_interview_config_interview_configs__id__get:
+    speakeasy-default-read-interview-config-interview-configs-id-get:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: "<value>"
+        "422": {}
+  create_session_create_session_post:
+    speakeasy-default-create-session-create-session-post:
+      requestBody:
+        application/json: {"interview_config_id": "<id>"}
+      responses:
+        "200":
+          application/json: "<value>"
+        "422": {}
+  read_sessions_sessions_post:
+    speakeasy-default-read-sessions-sessions-post:
+      requestBody:
+        application/json: {"interview_config_id": "<id>"}
+      responses:
+        "200":
+          application/json: "<value>"
+        "422": {}
+  read_session_sessions__id__get:
+    speakeasy-default-read-session-sessions-id-get:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: "<value>"
+        "422": {}

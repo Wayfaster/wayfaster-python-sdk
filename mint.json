@@ -1,8 +1,8 @@
 {
   "api": {
-    "baseUrl": "https://api.techinterviewer.ai", // string array for multiple base URLs
+    "baseUrl": "https://api.techinterviewer.ai",
     "auth": {
-      "method": "basic" // options: bearer, basic, key.
+      "method": "basic"
     }
   },
   "anchors": [

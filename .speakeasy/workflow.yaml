@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     Wayfaster-OAS:
         inputs:
-            - location: ../openapi.yaml
+            - location: openapi.yaml
         overlays:
             - location: .speakeasy/speakeasy-modifications-overlay-1.yaml
         registry:
